@@ -9,7 +9,7 @@ This is a shared, persistent, evidence-first engineering repository for the thre
 |---|---|---|
 | `speedtest` | Ookla Speedtest server investigations, native browser Speedtest, testing and performance evidence | Discovery pending |
 | `lg` | Looking Glass source code, network diagnostics and integration evidence | Discovery pending |
-| `rs` | RS project code, architecture and diagnostics | Expansion of "RS" and current deployment not yet verified |
+| `rs` | Route Server: BGP routing policy, peer/session diagnostics, configuration and development evidence | Project identity confirmed; deployment and software stack not yet verified |
 
 ## Evidence format
 Each dated investigation should record:
@@ -30,4 +30,4 @@ Capture source identifier, observation date, environment, redacted command/outpu
 ## Next discovery inputs
 - Read-only inventory of Speedtest services, runtime and browser code.
 - Looking Glass application source, network test endpoints and observed deployments.
-- Definition of RS and inventory of its source, processes and dependencies.
+- Route Server implementation inventory: routing daemon, BGP peers, policy model, processes and dependencies.
