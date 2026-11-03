@@ -1,0 +1,26 @@
+name: Speedtest LG RS smoke-unit-tests
+
+on:
+  pull_request:
+    paths:
+      - "tools/service_smoke.py"
+      - "tests/test_service_smoke.py"
+      - ".github/workflows/service-smoke-unit.yml"
+  push:
+    paths:
+      - "tools/service_smoke.py"
+      - "tests/test_service_smoke.py"
+      - ".github/workflows/service-smoke-unit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Python
+        run: python3 -m py_compile tools/service_smoke.py tests/test_service_smoke.py
+      - name: Run mocked unit tests (no production access)
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
