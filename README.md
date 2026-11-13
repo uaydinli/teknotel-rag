@@ -15,6 +15,9 @@ This repository is the persistent project record. In this ChatGPT conversation, 
 - Prefer append-only evidence logs for investigations.
 - Never commit secrets, credentials, private keys or authentication tokens.
 
+## BGP / Route Server references
+- [Teknotel AS25145 BGP communities, RTBH and upstream policy](evidence/route-server/2026-11-13-tcloud-bgp-blackhole-communities.md) — customer-facing RTBH, upstream announcement suppression/prepend, Local Preference and NOC boundaries.
+
 ## Current Graylog investigation
 The discovery scope is: stream rules, pipeline definitions, pipeline-to-stream bindings, pipeline rules, index sets, and index ranges.
 The exact MongoDB command output is not present in the current repository context, so no unverified values are recorded.
