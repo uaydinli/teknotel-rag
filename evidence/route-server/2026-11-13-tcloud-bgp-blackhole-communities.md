@@ -206,3 +206,21 @@ No live router configuration, BGP session, route, or traffic was changed or test
 ## 12. Retrieval keywords
 
 AS25145, BGP community, BGP communities, RTBH, remote triggered black hole, blackhole, 25145:666, 25145:444, 25145:555, 25145:1001, 25145:1002, 25145:1003, AS9121, AS34984, AS6762, AS6939, AS9002, AS20715, AS3223, DE-CIX, Voxility, TiSparkle, RETN, Hurricane Electric, Local Preference, AS-path prepend, Junos, IOS-XE, RouterOS.
+
+
+## 13. Cross-check against the T-FortiFirewall-ANK BGP audit
+
+A separate read-only audit of T-FortiFirewall-ANK (FortiGate-100F, local AS25145; snapshot 2026-11-13) records that the route-map named Prepend sets community 25145:1006 and does not prepend AS_PATH. The audit states that the meaning of 25145:1006 still requires confirmation.
+
+Cross-reference:
+- The T-Cloud community guide captured in this document does not define 25145:1006.
+- Do not assume 25145:1006 is equivalent to generic prepend communities 25145:1001/1002/1003.
+- Do not assume it is equivalent to an upstream-specific action community in the 25145:2xxx through 25145:9xxx ranges.
+- Its operational meaning and acceptance must be confirmed with the Teknotel NOC/provider policy owner before changing the FortiGate route-map.
+
+Evidence classification:
+- OBSERVED in the separate FortiGate audit: route-map Prepend sets 25145:1006; no AS_PATH prepend action is attached through that route-map.
+- OBSERVED in this public guide: 25145:1001/1002/1003 and the upstream-specific community ranges are documented; 25145:1006 is not documented.
+- NOT VERIFIED: what 25145:1006 actually does in the live AS25145 network.
+
+Related audit: https://github.com/uaydinli/datacenter/blob/main/docs/fortigate-ank-bgp-audit.md
