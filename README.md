@@ -18,6 +18,7 @@ This repository is the persistent project record. In this ChatGPT conversation, 
 ## BGP / Route Server references
 - [Teknotel AS25145 BGP communities, RTBH and upstream policy](evidence/route-server/2026-11-13-tcloud-bgp-blackhole-communities.md) — customer-facing RTBH, upstream announcement suppression/prepend, Local Preference and NOC boundaries.
 - [AS25145 bgp.tools ASN profile and routing policy review](evidence/route-server/2026-11-13-bgp-tools-as25145-profile.md) — originated IPv4/IPv6 prefixes, upstreams, peers, downstreams, DE-CIX, RIPE import/export policy, RPKI, community discrepancies and validation items.
+- [AS25145 bgp.he.net + RIPEstat expanded BGP audit](evidence/route-server/2026-11-13-bgp-he-ripestat-as25145-expanded-audit.md) — 13 IPv6 RPKI-invalid /64s, AS51683 customer-origin routes, aggregate/more-specific mapping, prefix-count reconciliation and RIPEstat API collection plan.
 
 ## Current Graylog investigation
 The discovery scope is: stream rules, pipeline definitions, pipeline-to-stream bindings, pipeline rules, index sets, and index ranges.
